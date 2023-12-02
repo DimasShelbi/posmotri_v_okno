@@ -298,24 +298,20 @@ ol {
 }
 
 .search-form__textfield:active {
-  outline: 1px solid #FFF;
-  outline-offset: 0px;
+  border: none ;
 }
 
 .search-form__pseudo-checkbox {
-  position: relative;
   display: flex;
+  justify-content: center;
+  align-items: center;
   width: 19px;
   height: 19px;
   border: 1px solid #FFF;
 }
 
-.search-form__pseudo-checkbox::before{
+.search-form__pseudo-checkbox::after{
   content: '';
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
   display: block;
   width: 15px;
   height: 15px;
@@ -323,6 +319,6 @@ ol {
   opacity: 0;
 }
 
-.search-form__checkbox:checked + .search-form__pseudo-checkbox::before {
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
   opacity: 1;
 }
