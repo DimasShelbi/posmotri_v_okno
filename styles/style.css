@@ -9,6 +9,9 @@ html {
 }
 
 .page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
@@ -38,7 +41,6 @@ ol {
 }
 
 .content {
-  margin: 133px auto;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -58,7 +60,6 @@ ol {
   flex-wrap: wrap;
   align-items: flex-end;
   width: 711px;
-  height: 54px;
 }
 
 .search-form__fieldset-title{
@@ -67,7 +68,12 @@ ol {
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
+  line-height: 20px;
+}
+
+.search-form__checkbox-list {
+  display: flex;
+  gap: 15px; 
 }
 
 .title{
@@ -117,6 +123,8 @@ ol {
 .result__video {
   width: 100%;
   height: 100%;  
+  object-fit: cover;
+  object-position: center;
 }
 
 .content__video-card{
@@ -128,6 +136,8 @@ ol {
   height: 103px;
   justify-content: flex-end;
   flex-shrink: 0;
+  object-fit: cover;
+  object-position: center;
 }
 
 .content__video-card-description-container{
@@ -160,7 +170,7 @@ ol {
 
 .content__card-link:focus-visible{
   outline: 1px solid #FFF;
-  outline-offset: 2px;
+  outline-offset: 1px;
 }
 
 .content__card-link_current {
@@ -199,6 +209,7 @@ ol {
   align-items: center;
   gap: 5px;
   width: fit-content;
+  line-height: 30px;
 }
 
 .search-form__label:focus {
@@ -211,6 +222,7 @@ ol {
 }
 .search-form__label:hover:not(:only-of-type) {
   text-decoration: underline;
+  cursor: pointer;
 }
 
 .button {
@@ -245,7 +257,7 @@ ol {
 
 .button:focus-visible {
   outline: 1px solid #FFF;
-  outline-offset: 2px;
+  outline-offset: 1px;
 }
 
 .search-form__submit-button{
@@ -253,7 +265,8 @@ ol {
 }
 
 .more-button {
-  width: 100%;
+  width: 99%;
+  margin: 2px;
 }
 
 .search-form__textfield {
@@ -279,18 +292,19 @@ ol {
   outline: none;
 }
 
-.search-form__textfield:active {
- border: 1px solid #FFF;
-}
-
 .search-form__textfield:focus-visible {
   outline: 1px solid #FFF;
   outline-offset: 1px;
 }
 
+.search-form__textfield:active {
+  outline: 1px solid #FFF;
+  outline-offset: 0px;
+}
+
 .search-form__pseudo-checkbox {
   position: relative;
-  display: inline-block;
+  display: flex;
   width: 19px;
   height: 19px;
   border: 1px solid #FFF;
